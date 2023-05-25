@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8" />
+	<title>Quản Lý Sản Phẩm</title>
+
+    <style>
+		.switch {
+			position: relative;
+			display: inline-block;
+			width: 60px;
+			height: 34px;
+		}
+
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #ccc;
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 26px;
+			width: 26px;
+			left: 4px;
+			bottom: 4px;
+			background-color: white;
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+
+		input:checked+.slider {
+			background-color: #2196F3;
+		}
+
+		input:focus+.slider {
+			box-shadow: 0 0 1px #2196F3;
+		}
+
+		input:checked+.slider:before {
+			-webkit-transform: translateX(26px);
+			-ms-transform: translateX(26px);
+			transform: translateX(26px);
+		}
+
+		/* Rounded sliders */
+		.slider.round {
+			border-radius: 34px;
+		}
+
+		.slider.round:before {
+			border-radius: 50%;
+		}
+	</style>
+
+	<!-- Site favicon -->
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png" /> -->
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet" />
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
+	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css" />
+	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+	<!-- switchery css -->
+	<link rel="stylesheet" type="text/css" href="vendors/styles/switchery.min.css" />
+
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- Image -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js" crossorigin="anonymous"></script>
+
+	
+</head>
+
+<body>
+	<div class="header">
+		<div class="header-left">
+			<div class="menu-icon bi bi-list"></div>
+			<div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
+			<div class="header-search">
+				<form>
+					<div class="form-group mb-0">
+						<i class="dw dw-search2 search-icon"></i>
+						<input type="text" class="form-control search-input" placeholder="Từ Khóa" />
+						<div class="dropdown">
+							<a class="dropdown-toggle no-arrow" href="" role="button">
+								<i class="ion-arrow-down-c"></i>
+							</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="header-right">
+			<div class="dashboard-setting user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+						<i class="dw dw-settings2"></i>
+					</a>
+				</div>
+			</div>
+			<div class="user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+						<i class="icon-copy dw dw-notification"></i>
+						<span class="badge notification-active"></span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<div class="notification-list mx-h-350 customscroll">
+							<ul>
+								<li>
+									<a href="#">
+										<img src="vendors/images/img.jpg" alt="" />
+										<h3>John Doe</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing
+											elit, sed...
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="vendors/images/photo1.jpg" alt="" />
+										<h3>Lea R. Frith</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing
+											elit, sed...
+										</p>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="user-info-dropdown">
+				<div class="dropdown">
+					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+						<span class="user-icon">
+							<img src="vendors/images/photo1.jpg" alt="" />
+						</span>
+						<span class="user-name">lunt</span>
+
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+						<a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Thông tin Admin</a>
+						<a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Hỗ trợ</a>
+						<a class="dropdown-item" href="login.html"><i class="dw dw-logout"></i> Đăng Xuất</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="right-sidebar">
+		<div class="sidebar-title">
+			<h3 class="weight-600 font-16 text-blue">
+				Layout Settings
+				<span class="btn-block font-weight-400 font-12">User Interface Settings</span>
+			</h3>
+			<div class="close-sidebar" data-toggle="right-sidebar-close">
+				<i class="icon-copy ion-close-round"></i>
+			</div>
+		</div>
+		<!-- <div class="right-sidebar-body customscroll">
+			
+			</div> -->
+		</div>
+	</div>
+
+	<div class="left-side-bar sidebar-light">
+		<div class="brand-logo">
+			<a href="index.html">
+				<img src="img/logo.svg" alt="" />
+			</a>
+			<div class="close-sidebar" data-toggle="left-sidebar-close">
+				<i class="ion-close-round"></i>
+			</div>
+		</div>
+		<div class="menu-block customscroll">
+			<div class="sidebar-menu">
+				<ul id="accordion-menu">
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-house"></span><span class="mtext">Quản Lý</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="ProductManage.html">Sản Phẩm</a></li>
+							<li><a href="UserManage.html">Tài Khoản</a></li>
+							<li><a href="BillManage.html">Đơn Hàng</a></li>
+							<li><a href="DanhMucManage.html">Danh Mục</a></li>
+							<li><a href="VoucherManage.html">Mã Giảm Giá</a></li>
+							<li><a href="NhaCungCapManage.html">Nhà Cung Cấp</a></li>
+							<li><a href="VoucherManage.html">Phiếu Nhập</a></li>
+							<li><a href="VoucherManage.html">Phiếu Xuất</a></li>
+							<li><a href="VoucherManage.html">Bình Luận</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-textarea-resize"></span><span class="mtext">Danh Sách</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="ListProduct.html">Sản Phẩm</a></li>
+							<li><a href="ListUser.html">Tài Khoản</a>
+							<li><a href="ListBill.html">Đơn Hàng</a></li>
+							<li><a href="ListDanhMuc.html">Danh Mục</a></li>
+							<li><a href="ListVoucher.html">Mã Giảm Giá</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="main-container">
+		<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="min-height-200px">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="title">
+								<h4>Quản Lý Nhà Cung Cấp</h4>
+							</div>
+							<nav aria-label="breadcrumb" role="navigation">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item">
+										<a href="index.html">Trang Chủ</a>
+									</li>
+									<li class="breadcrumb-item active" aria-current="page">
+										Quản Lý Nhà Cung Cấp
+									</li>
+								</ol>
+							</nav>
+						</div>
+						<div class="col-md-6 col-sm-12 text-right">
+							<!-- <div class="dropdown">
+								<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+								data-toggle="dropdown">
+								January 2018
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Export List</a>
+									<a class="dropdown-item" href="#">Policies</a>
+									<a class="dropdown-item" href="#">View Assets</a>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<!-- Default Basic Forms Start -->
+				<div class="pd-20 card-box mb-30">
+					<div class="clearfix">
+						<div class="pull-left">
+							<h4 class="text-blue h4">Quản Lý Nhà Cung Cấp</h4>
+							<!-- <p class="mb-30">All bootstrap element classies</p> -->
+						</div>
+
+					</div>
+					<form>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Mã Nhà Cung Cấp</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" type="text" placeholder="NC0001" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Tên Nhà Cung Cấp</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" type="text" placeholder="Asus" />
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Tên Giao Dịch</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" type="text" placeholder="Asus" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Email</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" type="text" placeholder="lunguyen@gmail.com" />
+							</div>
+						</div>
+                        <div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Số Điện Thoại</label>
+							<div class="col-sm-12 col-md-10">
+								<input class="form-control" type="text" placeholder="09-0909-0898" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Hiển Thị</label>
+							<!-- <input type="checkbox" checked class="col-sm-12 col-md-10" /> -->
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+							</label>
+						</div>
+						<div class="row">
+							<div class="col align-self-end">
+								<button class="btn btn-danger">Xóa</button>
+								<button class="btn btn-warning">Cập Nhập</button>
+								<button class="btn btn-success">Thêm</button>
+
+							</div>
+						</div>
+					</form>
+
+				</div>
+
+				<!-- Default Basic Forms End -->
+
+
+				<div class="footer-wrap pd-20 mb-20 card-box">
+					Web Design by
+					<a href="#" target="_blank">KLB</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- js -->
+		<script src="vendors/styles/switchery.min.js"></script>
+		<script src="vendors/scripts/core.js"></script>
+		<script src="vendors/scripts/script.min.js"></script>
+		<script src="vendors/scripts/process.js"></script>
+		<script src="vendors/scripts/layout-settings.js"></script>
+
+</body>
+
+</html>
