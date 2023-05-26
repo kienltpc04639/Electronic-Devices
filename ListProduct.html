@@ -156,29 +156,43 @@
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon bi bi-house"></span><span class="mtext">Quản Lý</span>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="ProductManage.html">Sản Phẩm</a></li>
-                            <li><a href="UserManage.html">Tài Khoản</a></li>
-                            <li><a href="BillManage.html">Đơn Hàng</a></li>
-                            <li><a href="DanhMucManage.html">Danh Mục</a></li>
-                            <li><a href="VoucherManage.html">Mã Giảm Giá</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon bi bi-textarea-resize"></span><span class="mtext">Danh Sách</span>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="ListProduct.html">Sản Phẩm</a></li>
-                            <li><a href="ListUser.html">Tài Khoản</a>
-                            <li><a href="ListBill.html">Đơn Hàng</a></li>
-                            <li><a href="ListDanhMuc.html">Danh Mục</a></li>
-                            <li><a href="ListVoucher.html">Mã Giảm Giá</a></li>
-                        </ul>
-                    </li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-house"></span><span class="mtext">Trang Chủ</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="#">Trang Chủ</a></li>
+							<li><a href="#">Thống Kê</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-textarea-resize"></span><span class="mtext">Quản Lý</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="ProductManage.html">Sản Phẩm</a></li>
+							<li><a href="UserManage.html">Tài Khoản</a></li>
+							<li><a href="BillManage.html">Đơn Hàng</a></li>
+							<li><a href="DanhMucManage.html">Danh Mục</a></li>
+							<li><a href="VoucherManage.html">Mã Giảm Giá</a></li>
+							<li><a href="NhaCungCapManage.html">Nhà Cung Cấp</a></li>
+							<li><a href="#">Phiếu Nhập (Dạng Bảng)</a></li>
+							<li><a href="#">Phiếu Xuất (Dạng Bảng)</a></li>
+							<li><a href="ReviewManage.html">Đánh Giá</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-table"></span><span class="mtext">Danh Sách</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="ListProduct.html">Sản Phẩm</a></li>
+							<li><a href="ListUser.html">Tài Khoản</a>
+							<li><a href="ListBill.html">Đơn Hàng</a></li>
+							<li><a href="ListDanhMuc.html">Danh Mục</a></li>
+							<li><a href="ListVoucher.html">Mã Giảm Giá</a></li>
+							<li><a href="ListNhaCungCap.html">Nhà Cung Cấp</a></li>
+						</ul>
+					</li>
                 </ul>
             </div>
         </div>
@@ -230,27 +244,7 @@
                         </p> -->
                     </div>
                     <div class="pb-20">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="dataTables_length" id="DataTables_Table_0_length"><label> <select
-                                            name="DataTables_Table_0_length" aria-controls="DataTables_Table_0"
-                                            class="custom-select custom-select-sm form-control form-control-sm">
-                                            <option value="10">10</option>
-                                            <option value="25">25</option>
-                                            <option value="50">50</option>
-                                            <option value="-1">All</option>
-                                        </select> </label>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div id="DataTables_Table_0_filter" class="dataTables_filter">
-                                    <label>Tìm Kiếm:
-                                    </label>
-                                    <label><input type="search" class="form-control form-control-sm"
-                                            placeholder="Từ Khóa" aria-controls="DataTables_Table_0"></label>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <table class="data-table table stripe hover nowrap">
                             <thead>
                                 <tr>
@@ -327,31 +321,7 @@
 
                             </tbody>
                         </table>
-                        <div class="row">
-                            <div class="col-sm-12 col-md-5">
-                                <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
-                                    aria-live="polite">1-10 of 12 entries</div>
-                            </div>
-                            <div class="col-sm-12 col-md-7">
-                                <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
-                                    <ul class="pagination">
-                                        <li class="paginate_button page-item previous disabled"
-                                            id="DataTables_Table_0_previous"><a href="#"
-                                                aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0"
-                                                class="page-link"><i class="ion-chevron-left"></i></a></li>
-                                        <li class="paginate_button page-item active"><a href="#"
-                                                aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
-                                                class="page-link">1</a></li>
-                                        <li class="paginate_button page-item "><a href="#"
-                                                aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0"
-                                                class="page-link">2</a></li>
-                                        <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a
-                                                href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0"
-                                                class="page-link"><i class="ion-chevron-right"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <!-- Simple Datatable End -->

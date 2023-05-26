@@ -120,7 +120,6 @@
 			<div class="user-info-dropdown">
 				<div class="dropdown">
 					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-						
 						<span class="user-icon">
 							<img src="vendors/images/photo1.jpg" alt="" />
 						</span>
@@ -155,7 +154,7 @@
 	<div class="left-side-bar sidebar-light">
 		<div class="brand-logo">
 			<a href="index.html">
-				<img src="img/logo.svg" alt=""/>
+				<img src="img/logo.svg" alt="" />
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
@@ -166,7 +165,16 @@
 				<ul id="accordion-menu">
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon bi bi-house"></span><span class="mtext">Quản Lý</span>
+							<span class="micon bi bi-house"></span><span class="mtext">Trang Chủ</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="#">Trang Chủ</a></li>
+							<li><a href="#">Thống Kê</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-textarea-resize"></span><span class="mtext">Quản Lý</span>
 						</a>
 						<ul class="submenu">
 							<li><a href="ProductManage.html">Sản Phẩm</a></li>
@@ -174,11 +182,15 @@
 							<li><a href="BillManage.html">Đơn Hàng</a></li>
 							<li><a href="DanhMucManage.html">Danh Mục</a></li>
 							<li><a href="VoucherManage.html">Mã Giảm Giá</a></li>
+							<li><a href="NhaCungCapManage.html">Nhà Cung Cấp</a></li>
+							<li><a href="#">Phiếu Nhập (Dạng Bảng)</a></li>
+							<li><a href="#">Phiếu Xuất (Dạng Bảng)</a></li>
+							<li><a href="ReviewManage.html">Đánh Giá</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon bi bi-textarea-resize"></span><span class="mtext">Danh Sách</span>
+							<span class="micon bi bi-table"></span><span class="mtext">Danh Sách</span>
 						</a>
 						<ul class="submenu">
 							<li><a href="ListProduct.html">Sản Phẩm</a></li>
@@ -186,6 +198,7 @@
 							<li><a href="ListBill.html">Đơn Hàng</a></li>
 							<li><a href="ListDanhMuc.html">Danh Mục</a></li>
 							<li><a href="ListVoucher.html">Mã Giảm Giá</a></li>
+							<li><a href="ListNhaCungCap.html">Nhà Cung Cấp</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -241,7 +254,7 @@
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Mã Đơn Hàng</label>
 							<div class="col-sm-12 col-md-10">
-								<input class="form-control" type="text" placeholder="SP0001" />
+								<input class="form-control" type="text" placeholder="DH0001" />
 							</div>
 						</div>
 						<div class="form-group row">
@@ -256,7 +269,6 @@
 								<input class="form-control" type="text" placeholder="17.990.000đ" />
 							</div>
 						</div>
-                        
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Số Lượng</label>
 							<div class="col-sm-12 col-md-10">
@@ -270,10 +282,10 @@
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="example-datetime-local-input" class="col-sm-12 col-md-2 col-form-label">Ngày Đặt Hàng</label>
+							<label for="example-datetime-local-input" class="col-sm-12 col-md-2 col-form-label">Ngày Đặt
+								Hàng</label>
 							<div class="col-sm-12 col-md-10">
-								<input class="form-control datetimepicker" placeholder="dd-MM-yyyy"
-									type="text" />
+								<input class="form-control datetimepicker" placeholder="dd-MM-yyyy" type="text" />
 							</div>
 						</div>
 						<div class="form-group row">
@@ -282,7 +294,7 @@
 								<input class="form-control" placeholder="ND0001" type="text" />
 							</div>
 						</div>
-                        <div class="form-group row">
+						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Tên Người Dùng</label>
 							<div class="col-sm-12 col-md-10">
 								<input class="form-control" placeholder="Nguyễn Lũ" type="text" />
@@ -291,7 +303,7 @@
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Số Điện Thoại</label>
 							<div class="col-sm-12 col-md-10">
-								<input class="form-control" placeholder="09-0990-0899" type="text" />
+								<input class="form-control" placeholder="XX-XXXX-XXXX" type="text" />
 							</div>
 						</div>
 						<div class="form-group row">
@@ -302,36 +314,36 @@
 						</div>
 						<div class="row">
 							<div class="col align-self-end">
-									<button class="btn btn-danger">Xóa</button>
-									<button class="btn btn-warning">Cập Nhập</button>
-									<button class="btn btn-success">Thêm</button>
-									
+								<button class="btn btn-danger">Xóa</button>
+								<button class="btn btn-warning">Cập Nhập</button>
+								<button class="btn btn-success">Thêm</button>
+
 							</div>
-                            <div class="col">
-                                <label class="col-sm-12 col-md-3 col-form-label">Tổng Tiền:</label>
-                                <label style="font-weight: bold;" class="col-sm-12 offset-md-3 col-md-5 col-form-label">10.000.000đ</label>
-                            </div>
+							<div class="col">
+								<label class="col-sm-12 col-md-3 col-form-label">Tổng Tiền:</label>
+								<label style="font-weight: bold;"
+									class="col-sm-12 offset-md-3 col-md-5 col-form-label">10.000.000đ</label>
+							</div>
 						</div>
 					</form>
-					
+
 				</div>
 
-					<!-- Default Basic Forms End -->
+				<!-- Default Basic Forms End -->
 
-				
+
 				<div class="footer-wrap pd-20 mb-20 card-box">
-					Web Design by 
+					Web Design by
 					<a href="#" target="_blank">KLB</a>
 				</div>
 			</div>
 		</div>
-		
 		<!-- js -->
 		<script src="vendors/scripts/core.js"></script>
 		<script src="vendors/scripts/script.min.js"></script>
 		<script src="vendors/scripts/process.js"></script>
 		<script src="vendors/scripts/layout-settings.js"></script>
-
+	</div>
 </body>
 
 </html>

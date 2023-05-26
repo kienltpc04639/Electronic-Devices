@@ -6,67 +6,7 @@
 	<meta charset="utf-8" />
 	<title>Quản Lý Sản Phẩm</title>
 
-    <style>
-		.switch {
-			position: relative;
-			display: inline-block;
-			width: 60px;
-			height: 34px;
-		}
-
-		.switch input {
-			opacity: 0;
-			width: 0;
-			height: 0;
-		}
-
-		.slider {
-			position: absolute;
-			cursor: pointer;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: #ccc;
-			-webkit-transition: .4s;
-			transition: .4s;
-		}
-
-		.slider:before {
-			position: absolute;
-			content: "";
-			height: 26px;
-			width: 26px;
-			left: 4px;
-			bottom: 4px;
-			background-color: white;
-			-webkit-transition: .4s;
-			transition: .4s;
-		}
-
-		input:checked+.slider {
-			background-color: #2196F3;
-		}
-
-		input:focus+.slider {
-			box-shadow: 0 0 1px #2196F3;
-		}
-
-		input:checked+.slider:before {
-			-webkit-transform: translateX(26px);
-			-ms-transform: translateX(26px);
-			transform: translateX(26px);
-		}
-
-		/* Rounded sliders */
-		.slider.round {
-			border-radius: 34px;
-		}
-
-		.slider.round:before {
-			border-radius: 50%;
-		}
-	</style>
+    
 
 	<!-- Site favicon -->
 	<!-- <link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png" />
@@ -85,6 +25,8 @@
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
 	<!-- switchery css -->
 	<link rel="stylesheet" type="text/css" href="vendors/styles/switchery.min.css" />
+
+
 
 	<link rel="stylesheet" href="css/styles.css">
 	<!-- Image -->
@@ -205,7 +147,16 @@
 				<ul id="accordion-menu">
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon bi bi-house"></span><span class="mtext">Quản Lý</span>
+							<span class="micon bi bi-house"></span><span class="mtext">Trang Chủ</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="#">Trang Chủ</a></li>
+							<li><a href="#">Thống Kê</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-textarea-resize"></span><span class="mtext">Quản Lý</span>
 						</a>
 						<ul class="submenu">
 							<li><a href="ProductManage.html">Sản Phẩm</a></li>
@@ -214,14 +165,14 @@
 							<li><a href="DanhMucManage.html">Danh Mục</a></li>
 							<li><a href="VoucherManage.html">Mã Giảm Giá</a></li>
 							<li><a href="NhaCungCapManage.html">Nhà Cung Cấp</a></li>
-							<li><a href="VoucherManage.html">Phiếu Nhập</a></li>
-							<li><a href="VoucherManage.html">Phiếu Xuất</a></li>
-							<li><a href="VoucherManage.html">Bình Luận</a></li>
+							<li><a href="#">Phiếu Nhập (Dạng Bảng)</a></li>
+							<li><a href="#">Phiếu Xuất (Dạng Bảng)</a></li>
+							<li><a href="ReviewManage.html">Đánh Giá</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon bi bi-textarea-resize"></span><span class="mtext">Danh Sách</span>
+							<span class="micon bi bi-table"></span><span class="mtext">Danh Sách</span>
 						</a>
 						<ul class="submenu">
 							<li><a href="ListProduct.html">Sản Phẩm</a></li>
@@ -229,6 +180,7 @@
 							<li><a href="ListBill.html">Đơn Hàng</a></li>
 							<li><a href="ListDanhMuc.html">Danh Mục</a></li>
 							<li><a href="ListVoucher.html">Mã Giảm Giá</a></li>
+							<li><a href="ListNhaCungCap.html">Nhà Cung Cấp</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -297,7 +249,7 @@
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Tên Giao Dịch</label>
 							<div class="col-sm-12 col-md-10">
-								<input class="form-control" type="text" placeholder="Asus" />
+								<input class="form-control" type="text" placeholder="Mua " />
 							</div>
 						</div>
 						<div class="form-group row">
@@ -309,16 +261,17 @@
                         <div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Số Điện Thoại</label>
 							<div class="col-sm-12 col-md-10">
-								<input class="form-control" type="text" placeholder="09-0909-0898" />
+								<input class="form-control" type="text" placeholder="XX-XXXX-XXXX" />
 							</div>
 						</div>
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Hiển Thị</label>
-							<!-- <input type="checkbox" checked class="col-sm-12 col-md-10" /> -->
-							<label class="switch">
-								<input type="checkbox">
-								<span class="slider round"></span>
-							</label>
+							<div class="col-sm-12 col-md-10">
+								<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+								</label>
+							</div>
 						</div>
 						<div class="row">
 							<div class="col align-self-end">

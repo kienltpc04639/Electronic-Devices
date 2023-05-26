@@ -167,7 +167,16 @@
 				<ul id="accordion-menu">
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon bi bi-house"></span><span class="mtext">Quản Lý</span>
+							<span class="micon bi bi-house"></span><span class="mtext">Trang Chủ</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="#">Trang Chủ</a></li>
+							<li><a href="#">Thống Kê</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-textarea-resize"></span><span class="mtext">Quản Lý</span>
 						</a>
 						<ul class="submenu">
 							<li><a href="ProductManage.html">Sản Phẩm</a></li>
@@ -175,11 +184,15 @@
 							<li><a href="BillManage.html">Đơn Hàng</a></li>
 							<li><a href="DanhMucManage.html">Danh Mục</a></li>
 							<li><a href="VoucherManage.html">Mã Giảm Giá</a></li>
+							<li><a href="NhaCungCapManage.html">Nhà Cung Cấp</a></li>
+							<li><a href="#">Phiếu Nhập (Dạng Bảng)</a></li>
+							<li><a href="#">Phiếu Xuất (Dạng Bảng)</a></li>
+							<li><a href="ReviewManage.html">Đánh Giá</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon bi bi-textarea-resize"></span><span class="mtext">Danh Sách</span>
+							<span class="micon bi bi-table"></span><span class="mtext">Danh Sách</span>
 						</a>
 						<ul class="submenu">
 							<li><a href="ListProduct.html">Sản Phẩm</a></li>
@@ -187,6 +200,7 @@
 							<li><a href="ListBill.html">Đơn Hàng</a></li>
 							<li><a href="ListDanhMuc.html">Danh Mục</a></li>
 							<li><a href="ListVoucher.html">Mã Giảm Giá</a></li>
+							<li><a href="ListNhaCungCap.html">Nhà Cung Cấp</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -242,13 +256,13 @@
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Mã Danh Mục</label>
 							<div class="col-sm-12 col-md-10">
-								<input class="form-control" type="text" placeholder="SP0001" />
+								<input class="form-control" type="text" placeholder="DM0001" />
 							</div>
 						</div>
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Tên Danh Mục</label>
 							<div class="col-sm-12 col-md-10">
-								<input class="form-control" type="text" placeholder="Laptop Asus" />
+								<input class="form-control" type="text" placeholder="Asus" />
 							</div>
 						</div>
 						<div class="form-group row">
@@ -256,8 +270,9 @@
 							<div class="col-sm-12 col-md-10">
 								<select class="custom-select col-12">
 									<option selected="">...</option>
-									<option value="1">1</option>
-									<option value="0">2</option>
+									<option value="LT">Laptop</option>
+									<option value="DT">Điện Thoại</option>
+									<option value="PK">Phụ Kiện</option>
 								</select>
 							</div>
 						</div>

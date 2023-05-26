@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Nhà Cung Cấp</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
+    <link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css" />
+    <link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/responsive.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
+        crossorigin="anonymous"></script> -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-GBZ3SGGX85");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-NXZMQSS");
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet" />
+    <style>
+        .logo {
+            font-family: "Jost", sans-serif;
+            font-size: 30px;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .logo>a {
+            text-decoration: none;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-left">
+            <div class="menu-icon bi bi-list"></div>
+            <div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
+            <div class="header-search">
+                <form>
+                    <div class="form-group mb-0">
+                        <i class="dw dw-search2 search-icon"></i>
+                        <input type="text" class="form-control search-input" placeholder="Từ Khóa" />
+                        <div class="dropdown">
+                            <a class="dropdown-toggle no-arrow" href="" role="button">
+                                <i class="ion-arrow-down-c"></i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="dashboard-setting user-notification">
+                <div class="dropdown">
+                    <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+                        <i class="dw dw-settings2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="user-notification">
+                <div class="dropdown">
+                    <a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+                        <i class="icon-copy dw dw-notification"></i>
+                        <span class="badge notification-active"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="notification-list mx-h-350 customscroll">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="vendors/images/img.jpg" alt="" />
+                                        <h3>John Doe</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed...
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="vendors/images/photo1.jpg" alt="" />
+                                        <h3>Lea R. Frith</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed...
+                                        </p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-info-dropdown">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                        <span class="user-icon">
+                            <img src="vendors/images/photo1.jpg" alt="" />
+                        </span>
+                        <span class="user-name">lunt</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                        <a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Thông tin Admin</a>
+                        <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Hỗ trợ</a>
+                        <a class="dropdown-item" href="login.html"><i class="dw dw-logout"></i> Đăng Xuất</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="right-sidebar">
+        <div class="sidebar-title">
+            <h3 class="weight-600 font-16 text-blue">
+                Layout Settings
+                <span class="btn-block font-weight-400 font-12">User Interface Settings</span>
+            </h3>
+            <div class="close-sidebar" data-toggle="right-sidebar-close">
+                <i class="icon-copy ion-close-round"></i>
+            </div>
+        </div>
+        <!-- <div class="right-sidebar-body customscroll">
+            
+        </div> -->
+    </div>
+
+    <div class="left-side-bar sidebar-light">
+        <div class="brand-logo">
+            <a href="index.html">
+                <img src="img/logo.svg" alt="" />
+            </a>
+            <div class="close-sidebar" data-toggle="left-sidebar-close">
+                <i class="ion-close-round"></i>
+            </div>
+        </div>
+        <div class="menu-block customscroll">
+            <div class="sidebar-menu">
+                <ul id="accordion-menu">
+                    <li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-house"></span><span class="mtext">Trang Chủ</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="#">Trang Chủ</a></li>
+							<li><a href="#">Thống Kê</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-textarea-resize"></span><span class="mtext">Quản Lý</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="ProductManage.html">Sản Phẩm</a></li>
+							<li><a href="UserManage.html">Tài Khoản</a></li>
+							<li><a href="BillManage.html">Đơn Hàng</a></li>
+							<li><a href="DanhMucManage.html">Danh Mục</a></li>
+							<li><a href="VoucherManage.html">Mã Giảm Giá</a></li>
+							<li><a href="NhaCungCapManage.html">Nhà Cung Cấp</a></li>
+							<li><a href="#">Phiếu Nhập (Dạng Bảng)</a></li>
+							<li><a href="#">Phiếu Xuất (Dạng Bảng)</a></li>
+							<li><a href="ReviewManage.html">Đánh Giá</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon bi bi-table"></span><span class="mtext">Danh Sách</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="ListProduct.html">Sản Phẩm</a></li>
+							<li><a href="ListUser.html">Tài Khoản</a>
+							<li><a href="ListBill.html">Đơn Hàng</a></li>
+							<li><a href="ListDanhMuc.html">Danh Mục</a></li>
+							<li><a href="ListVoucher.html">Mã Giảm Giá</a></li>
+							<li><a href="ListNhaCungCap.html">Nhà Cung Cấp</a></li>
+						</ul>
+					</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="pd-ltr-20 xs-pd-20-10">
+            <div class="min-height-200px">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="title">
+                                <h4>Danh Sách Nhà Cung Cấp</h4>
+                            </div>
+                            <nav aria-label="breadcrumb" role="navigation">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="index.html">Trang Chủ</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        Danh Sách Nhà Cung Cấp
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <!-- <div class="col-md-6 col-sm-12 text-right">
+                            <div class="dropdown">
+                                <a class="btn btn-primary dropdown-toggle" href="#" role="button"
+                                    data-toggle="dropdown">
+                                    January 2018
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">Export List</a>
+                                    <a class="dropdown-item" href="#">Policies</a>
+                                    <a class="dropdown-item" href="#">View Assets</a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Simple Datatable start -->
+                <div class="card-box mb-30">
+                    <div class="pd-20">
+                        <!-- <h4 class="text-blue h4">Danh Sách Sản Phẩm</h4>
+                        <p class="mb-0">
+                            you can find more options
+                            <a class="text-primary" href="https://datatables.net/" target="_blank">Click Here</a>
+                        </p> -->
+                    </div>
+                    <div class="pb-20">
+                        
+                        <table class="data-table table stripe hover nowrap">
+                            <thead>
+                                <tr>
+                                    <th class="table-plus datatable-nosort">Mã Nhà Cung Cấp</th>
+                                    <th>Tên Nhà Cung Cấp</th>
+                                    <th>Tên Giao Dịch</th>
+                                    <th>Email</th>
+                                    <th>Số Điện Thoại</th>
+                                    <th>Hiển Thị</th>
+                                    <th class="datatable-nosort">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table-plus">NC0001</td>
+                                    <td>Công Ty Asus</td>
+                                    <td>Mua</td>
+                                    <td>lunt@gmail.com</td>
+                                    <td>09-9989-0990</td>
+                                    <td>Hiển Thị</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+                                                href="#" role="button" data-toggle="dropdown">
+                                                <i class="dw dw-more"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                                                <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> Xem Sản
+                                                    Phẩm</a>
+                                                <a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Chỉnh
+                                                    Sửa</a>
+                                                <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i>
+                                                    Xóa</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="table-plus">NC0002</td>
+                                    <td>Công Ty Asus</td>
+                                    <td>Bán</td>
+                                    <td>lunt@gmail.com</td>
+                                    <td>09-9989-0990</td>
+                                    <td>Hiển Thị</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
+                                                href="#" role="button" data-toggle="dropdown">
+                                                <i class="dw dw-more"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                                                <a class="dropdown-item" href="#"><i class="dw dw-eye"></i> Xem Sản
+                                                    Phẩm</a>
+                                                <a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Chỉnh
+                                                    Sửa</a>
+                                                <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i>
+                                                    Xóa</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+                <!-- Simple Datatable End -->
+                <div class="footer-wrap pd-20 mb-20 card-box">
+                    Web Design by
+                    <a href="#" target="_blank">KLB</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="vendors/scripts/core.js"></script>
+    <script src="vendors/scripts/script.min.js"></script>
+    <script src="vendors/scripts/process.js"></script>
+    <script src="vendors/scripts/layout-settings.js"></script>
+    <script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+    <script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+    <!-- buttons for Export datatable -->
+    <script src="src/plugins/datatables/js/dataTables.buttons.min.js"></script>
+    <script src="src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
+    <script src="src/plugins/datatables/js/buttons.print.min.js"></script>
+    <script src="src/plugins/datatables/js/buttons.html5.min.js"></script>
+    <script src="src/plugins/datatables/js/buttons.flash.min.js"></script>
+    <script src="src/plugins/datatables/js/pdfmake.min.js"></script>
+    <script src="src/plugins/datatables/js/vfs_fonts.js"></script>
+    <!-- Datatable Setting js -->
+    <script src="vendors/scripts/datatable-setting.js"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS" height="0" width="0"
+            style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+</body>
+
+</html>
