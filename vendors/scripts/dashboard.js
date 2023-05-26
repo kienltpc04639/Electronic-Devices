@@ -309,14 +309,14 @@ var options5 = {
 		colors: ['transparent']
 	},
 	series: [{
-		name: 'In Progress',
-		data: [40, 28, 47, 22, 34, 25]
+		name: 'Sản phẩm bán ra',
+		data: [40, 28, 47, 22, 34, 25, 22, 34, 25, 28, 47, 100]
 	}, {
-		name: 'Complete',
-		data: [30, 20, 37, 10, 28, 11]
+		name: 'Sản phẩm được đánh giá tích cực',
+		data: [30, 20, 37, 10, 28, 11, 28, 11, 20, 37, 40, 90]
 	}],
 	xaxis: {
-		categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+		categories: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12'],
 		labels: {
 			style: {
 				colors: ['#353535'],
@@ -376,7 +376,7 @@ var options5 = {
 }
 
 var options6 = {
-	series: [73],
+	series: [100],
 	chart: {
 	  height: 350,
 	  type: 'radialBar',
@@ -418,7 +418,7 @@ var options6 = {
 	stroke: {
 	  dashArray: 4
 	},
-	labels: ['Achieve Goals'],
+	labels: ['Đạt được mục tiêu'],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);

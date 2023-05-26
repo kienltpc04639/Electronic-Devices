@@ -20,9 +20,9 @@ $(".tab-wizard2").steps({
 	transitionEffect: "fade",
 	titleTemplate: '<span class="step">#index#</span> <span class="info">#title#</span>',
 	labels: {
-		finish: "Submit",
-		next: "Next",
-		previous: "Previous",
+		finish: "Hoàn thành",
+		next: "TIếp tục",
+		previous: "Trở lại",
 	},
 	onStepChanged: function(event, currentIndex, priorIndex) {
 		$('.steps .current').prevAll().addClass('disabled');
